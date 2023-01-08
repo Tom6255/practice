@@ -1,0 +1,28 @@
+#include <stdio.h>
+int max(int x, int y)
+{
+//方法一
+	//int z;
+	//if (x > y)
+	//{
+	//	z = x;
+	//}
+	//else
+	//{
+	//	z = y;
+	//}
+	//return z;
+//方法二
+	return x > y ? x : y;//这是表示如果x>y,就返回x，否则就返回y;
+}
+int main(void)
+{
+	int a, b;
+	scanf_s("%d %d", &a, &b);
+
+	int i = max(a, b);//传参，不用再定义，因为函数在前面声明了
+	printf("max=%d", i);
+
+	return 0;
+
+}
