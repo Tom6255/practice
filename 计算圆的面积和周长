@@ -1,0 +1,19 @@
+//计算圆的面积和周长
+#include <stdio.h>
+#include <math.h>
+int main(void)
+{
+	double r = 0;
+	double s = 0, c = 0;
+
+	printf("Hello,This is Circle Calculator.\n");
+	printf("Please input circle radius:\n");
+	scanf_s("%lf", &r);//输入圆的周长
+
+	s = 3.14 * pow(r, 2);//pow（a,b）表示a^b.
+	c = 2 * 3.14 * r;
+  
+	printf("Area of the circle is %lf ,and perimeter of the circle is %lf.", s, c);
+
+	return 0;
+}
