@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(void)
+{
+	int max(int x, int y);//事先声明函数
+	int a, b, c;
+	printf("Please input two numbers, and there is a \',\' between there two numbers:\n");
+	scanf_s("%d,%d", &a, &b);
+
+	c = max(a, b);//调用max函数，此时的a与x对应，b对应y（与max里面的一一对应）
+  //输出
+	printf("max is %d", c);
+	return 0;
+}
+//max函数的具体内容
+int max(int x, int y)
+{
+	int z;
+	if (x > y)
+	{
+		z = x;
+	}
+	else
+	{
+		z = y;
+	}
+	return (z);//将z的值返回到上面运用max函数处
+}
