@@ -1,0 +1,39 @@
+/*数组排序*/
+//冒泡排序
+#include <stdio.h>
+#define N 5
+int main(void)
+{
+	int arr[N] = { 0 };
+	int i,j,k;
+
+	printf("请输入五个整数：\n");
+	for (i = 0; i < N; i++)
+	{
+		scanf_s("%d", &arr[i]);
+	}
+	//进行输入
+  //排序
+	for (k = 0; k < N; k++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			if (arr[j] < arr[j + 1])
+			{
+				int temp;
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+			//比较大小，以此交换数组内符合条件的邻近的两个数
+		}
+		//这才进行了一轮
+	}
+	//不断循环进行多轮，最多进行k=N-1轮
+	for (i=0; i < N; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	//进行输出
+	return 0;
+}
