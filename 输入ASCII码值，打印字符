@@ -1,0 +1,11 @@
+//输入一个ASCII码值（如，65），然后打印输入的字符。
+#include <stdio.h>
+int main(void)
+{
+	int ascii;
+	printf("请输入一个ASCII码值：\n");
+	scanf("%d", &ascii);
+
+	printf("%c", ascii);
+	return 0;
+}
