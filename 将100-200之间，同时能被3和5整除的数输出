@@ -1,0 +1,15 @@
+//将100-200之间，同时能被3和5整除的数输出
+#include <stdio.h>
+int main(void)
+{
+	int a=100;
+	while (a <= 200)
+	{
+		if (a % 3 == 0 && a % 5 == 0)//&&表示 并且
+		{
+			printf("%d\n", a);
+		}
+		a++;//自加
+	}
+	return 0;
+}
