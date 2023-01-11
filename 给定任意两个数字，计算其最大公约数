@@ -1,0 +1,29 @@
+//给定任意两个数字，计算其最大公约数
+#include <stdio.h>
+int main(void)
+{
+	int num1, num2;
+	puts("请输入两个正整数：");
+	scanf_s("%d %d", &num1, &num2);
+
+	int temp;
+	if (num1 < num2)
+	{
+		temp = num1;
+		num1 = num2;
+		num2 = temp;
+	}
+  //使得num2比num小，方便后面作为除数
+	int i = num2;
+	while (i > 0)
+	{
+		if (num1 % i == 0 && num2 % i == 0)
+		{
+			printf("%d", i);
+			break;
+		}
+		i--;
+	}
+
+	return 0;
+}
