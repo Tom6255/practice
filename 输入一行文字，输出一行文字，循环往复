@@ -1,0 +1,12 @@
+//输入一行文字，输出一行文字，循环往复
+#include <stdio.h>
+int main(void)
+{
+	int a = 0;
+	while ((a = getchar())!=EOF)//EOF是文件结束标志
+		/*在此处将a储存getchar()的值，然后在下面putchar输出，直到读取到结束（ctrl+z+回车)*/
+	{
+		putchar(a);
+	}
+	return 0;
+}
