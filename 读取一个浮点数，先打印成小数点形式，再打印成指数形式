@@ -1,0 +1,12 @@
+//读取一个浮点数，先打印成小数点形式，再打印成指数形式。
+#include <stdio.h>
+int main(void)
+{
+	float a = 0;
+	scanf("%f", &a);
+
+	printf("小数形式： %f \n", a);
+	printf("指数形式： %e \n", a);
+
+	return 0;
+}
