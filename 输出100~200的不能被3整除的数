@@ -1,0 +1,24 @@
+//输出100~200的不能被3整除的数，用上continue
+#include <stdio.h>
+int main(void)
+{
+	int num;
+	int count;
+	for (num = 100, count = 0; num <= 200;num++)
+	{
+		if (num % 3 != 0)
+		{
+			printf("%d ", num);
+			count++;
+		}
+		//当num=114，count=10时由于不输出，所以count还是=10，在下面又换了一次行。
+		//所以为了不换这样子的行，在下面将count控制在个位数里面
+		if (count != 0 && count % 5 == 0 )
+		{
+			count %= 5;
+			printf("\n");
+		}
+
+	}
+	return 0;
+}
