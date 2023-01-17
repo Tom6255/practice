@@ -1,0 +1,43 @@
+//求解方程（可以求解复数根）
+#include <stdio.h>
+#include <math.h>
+int main(void)
+{
+	double a, b, c, disc, x1, x2, realpart, imagpart;
+	puts("已知方程ax^2+bx+c=0，请分别输入a,b,c的值:");
+	scanf("%lf %lf %lf", &a, &b, &c);
+	printf("The equation ");
+	if (fabs(a) <= 1e-6)   //取绝对值，表示a无限接近于0
+	{
+		printf("is not quadratic\n");
+	}
+	else
+	{
+		disc = b * b - 4 * a * c;
+		if (fabs(disc) <= 1e-6)//相同根
+		{
+			printf("has two equal roots:%8.4lf\n", -b / (2 * a));
+		}
+		else
+		{
+			if (disc > 1e-6)//实根
+			{
+				x1 = (-b + sqrt(disc)) / (2 * a);
+				x2 = (-b - sqrt(disc)) / (2 * a);
+				printf("has distinct real roots:%8.4lf and %8.4lf \n", x1, x2);
+			}
+			else//虚根
+			{
+				realpart = -b / (2 * a);
+				imagpart = sqrt(-disc) / (2 * a);
+				printf("has complex roots:\n");
+				printf("%8.4lf + %8.4lfi\n", realpart, imagpart);
+				printf("%8.4lf - %8.4lfi\n", realpart, imagpart);
+
+			}
+		}
+		
+
+	}
+	return 0;
+}
